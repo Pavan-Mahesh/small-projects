@@ -170,7 +170,7 @@
 }
 
 #sl-no {
-  width: 30.03px;
+  min-width: 30.03px;
   text-align: center;
 }
 
