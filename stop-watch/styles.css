@@ -118,6 +118,7 @@
 }
 
 .flag-container {
+  min-height: 40.48px;
   width: max-content;
   display: flex;
   flex-direction: column;
@@ -129,7 +130,6 @@
   border-radius: 8px;
   backdrop-filter: blur(2px);
   margin: 40px 0px;
-  margin-bottom: minmax(40px, auto);
   overflow-y: scroll;
 }
 
@@ -251,6 +251,12 @@
     column-gap: clamp(20px, 3%, 40px);
     row-gap: 40px;
     justify-content: center;
+  }
+  @media(max-width: 642px) {
+    .container {
+      justify-content: start;
+      overflow-x: scroll;
+    }
   }
 
   .stop-watch {
