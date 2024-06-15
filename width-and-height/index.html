@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width x Height</title>
+
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      :root {
+        --border-radius: 4px;
+      }
+
+      .width-line {
+        width: 98vw;
+        height: var(--border-radius);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        position: absolute;
+
+        background-color: black;
+      }
+
+      .width-line > .ends {
+        display: block;
+        width: var(--border-radius);
+        height: 40px;
+        background-color: black;
+      }
+
+      .height-line {
+        width: var(--border-radius);
+        height: 98vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        position: absolute;
+
+        background-color: black;
+      }
+
+      .height-line > .ends {
+        display: block;
+        width: 40px;
+        height: var(--border-radius);
+        background-color: black;
+      }
+
+      .width-and-height-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        font-size: large;
+        background-color: white;
+        border: var(--border-radius) solid black;
+        padding: 12px;
+        z-index: 1;   
+      }
+
+      .width-container,
+      .height-container {
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .in-title {
+        font-size: 13px;
+      }
+
+      .in-measure {
+        font-size: 20px;
+      }
+
+      #figure {
+        font-weight: bold;
+      }
+
+      #units {
+        opacity: 0.4;
+      }
+
+      .cross {
+        align-self: flex-end;
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="width-line">
+      <div class="ends"></div>
+      <div class="ends"></div>
+    </div>
+
+    <div class="height-line">
+      <div class="ends"></div>
+      <div class="ends"></div>
+    </div>
+
+    <div class="width-and-height-container">
+      <div class="width-container">
+        <div class="in-title">Width</div>
+        <div class="in-measure">
+          <span id="figure"></span>
+          <span id="units">px</span></div>
+      </div>
+
+      <div class="cross">x</div>
+
+      <div class="height-container">
+        <div class="in-title">Height</div>
+        <div class="in-measure">
+          <span id="figure"></span>
+          <span id="units">px</span></div>
+      </div>
+    </div>
+
+    <script>
+      const widthFigure = document.querySelector('.width-container #figure');
+      const heightFigure = document.querySelector('.height-container #figure');
+
+      function updateWidthHeight() {
+        widthFigure.innerText = innerWidth;
+        heightFigure.innerText = innerHeight;
+      }
+      updateWidthHeight();
+
+      document.body.onresize = updateWidthHeight;
+    </script>
+  </body>
+</html>
