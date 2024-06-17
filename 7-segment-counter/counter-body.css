@@ -24,7 +24,7 @@ body {
 }
 
 :root {
-  --body-color: #39475B;
+  --body-color: rgb(50, 65, 80);
 
   --part-color: rgb(230, 230, 230);
 
