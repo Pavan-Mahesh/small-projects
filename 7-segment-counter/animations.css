@@ -1,0 +1,85 @@
+:root {
+  --animation-speed: 0.25s;
+}
+
+/* ============================================ */
+
+.center-to-top {
+  animation: center-top var(--animation-speed) forwards;
+}
+
+.top-to-center {
+  animation: top-center var(--animation-speed) forwards;
+}
+
+/* ============================================ */
+
+.center-to-bottom {
+  animation: center-bottom var(--animation-speed) forwards;
+}
+
+.bottom-to-center {
+  animation: bottom-center var(--animation-speed) forwards;
+}
+
+/* ============================================ */
+
+.center-to-left {
+  animation: center-left var(--animation-speed) forwards;
+}
+
+.left-to-center {
+  animation: left-center var(--animation-speed) forwards;
+}
+
+/* ============================================ */
+
+.center-to-right {
+  animation: center-right var(--animation-speed) forwards;
+}
+
+.right-to-center {
+  animation: right-center var(--animation-speed) forwards;
+}
+
+/* ============================================ */
+
+@keyframes center-top {
+  0% {top: 0%}
+  100% {top: -100%};
+}
+
+@keyframes top-center {
+  0% {top: -100%;}
+  100% {top: 0%};
+}
+
+@keyframes center-bottom {
+  0% {top: 0%;}
+  100% {top: 100%};
+}
+
+@keyframes bottom-center {
+  0% {top: 100%}
+  100% {top: 0%};
+}
+
+@keyframes center-right {
+  0% {right: 0%}
+  100% {right: -100%};
+}
+
+@keyframes right-center {
+  0% {right: -100%;}
+  100% {right: 0%};
+}
+
+@keyframes center-left {
+  0% {left: 0%}
+  100% {left: -100%};
+}
+
+@keyframes left-center {
+  0% {left: -100%;}
+  100% {left: 0%};
+}
