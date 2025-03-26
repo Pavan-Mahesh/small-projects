@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --height: 35px;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #14213d;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  padding: 24px;
+  background-color: #f6efdc;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.container label {
+  font-size: 0.8rem;
+}
+
+.sub-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.dropdown {
+  height: var(--height);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  background-color: white;
+  padding: 0px 5px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+
+.dropdown:focus-within {
+  border-width: 2.5px;
+}
+
+.dropdown img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dropdown select {
+  width: 60px;
+  height: 100%;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+input {
+  width: 150px;
+  height: var(--height);
+
+  padding: 0px 5px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+
+.info {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  text-align: center;
+}
+
+.info > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
